@@ -5,13 +5,9 @@
     font-family: "sans";
 }
 
-@font-face {
-    src: url("font/sans.ttf");
-    font-family: "sans";
-}
 
 .heading {
-    color: white;
+    color: rgb(12, 98, 211);
     font-size: 2rem;
     text-align: center;
     position: absolute;
@@ -49,7 +45,7 @@ section {
 
 .clock .container h2 {
     font-size: 3.5rem;
-    color: #fff;
+    color: #0d6ab6;
 }
 
 .clock .container h2:nth-child(odd) {
@@ -64,6 +60,6 @@ section {
     left: 10px;
     top: 20px;
     font-size: 1rem;
-    color: #fff;
+    color: #147ed4;
     font-weight: 700;
 }
