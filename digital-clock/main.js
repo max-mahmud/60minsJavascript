@@ -13,7 +13,7 @@ function isAmPm(hour) {
 }
 
 function isHour(hour) {
-    return hour > 12 ? `${24-hour}` : ``
+    return hour > 12 ? `${24-hour}` : `${hour}`
 }
 
 
