@@ -12,6 +12,11 @@ function isAmPm(hour) {
     return hour > 12 ? "PM" : "AM";
 }
 
+function isHour(hour) {
+    return hour > 12 ? `${24-hour}` : ``
+}
+
+
 function clock() {
     const date = new Date();
 
@@ -19,7 +24,7 @@ function clock() {
     let m = date.getMinutes();
     let s = date.getSeconds();
 
-    hour.textContent = formatTime(h);
+    hour.textContent = formatTime(isHour(h));
     minute.textContent = formatTime(m);
     seconds.textContent = formatTime(s);
     ampm.textContent = isAmPm(h);
