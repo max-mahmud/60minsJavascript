@@ -7,27 +7,26 @@ function formatTime(time) {
     return time.toString().padStart(2, "0");
 }
 
-
-function isAmPm(hour) {
-    return hour > 12 ? "PM" : "AM";
-}
-
-function isHour(hour) {
-    return hour > 12 ? `${24-hour}` : `${hour}`
-}
-
-
 function clock() {
     const date = new Date();
 
     let h = date.getHours();
     let m = date.getMinutes();
     let s = date.getSeconds();
+    
+    if(h >= 12){
+        ampm.innerHTML = 'PM';
+    }else{
+        ampm.innerHTML = 'AM';
+    }
 
-    hour.textContent = formatTime(isHour(h));
+    if (h > 12) {
+        h = h - 12;
+    }
+
+    hour.textContent = formatTime(h);
     minute.textContent = formatTime(m);
     seconds.textContent = formatTime(s);
-    ampm.textContent = isAmPm(h);
 }
 
 setInterval(clock, 1000);
